@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Toro</title>
+
+	<style>
+		.active{font-weight: bold;}
+		.right{width: 500px;top:10px; right:10px;position: absolute;}
+	</style>
+
+	<!--<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">-->
+
+	<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+
+
+
+	<!--MAIN-->
+	<script type="text/x-handlebars">
+		<h1>Toro</h1>
+		<ul>
+			<li>{{#link-to "index"}}Home{{/link-to}}</li>
+			<li>{{#link-to "ranking"}}Ranking{{/link-to}}</li>
+			<li>{{#link-to "sobre"}}Sobre{{/link-to}}</li>
+		</ul>
+		{{outlet}}
+	</script>
+
+
+
+
+	<!--INDEX-->
+	<script type="text/x-handlebars" data-template-name="index">
+		<h2>Home</h2>
+	</script>
+
+
+
+
+	<!--RANKING-->
+	<script type="text/x-handlebars" data-template-name="ranking">
+		<h2>Ranking</h2>
+		{{#each}}
+		<p>{{#link-to 'candidato' this}}{{nome}} {{sobrenome}}{{/link-to}}</p>
+		{{/each}}
+		<div class="right">{{outlet}}</div>
+	</script>
+
+		<!--CANDIDATO: child of RANKING-->
+		<script type="text/x-handlebars" data-template-name="candidato">
+			<h2>Candidato</h2>
+			<p>{{id}}</p>
+			<p>{{nome}} {{sobrenome}}</p>
+		</script>
+
+
+
+
+	<!--SOBRE-->
+	<script type="text/x-handlebars" data-template-name="sobre">
+		<h2>Sobre</h2>
+	</script>
+
+
+	<script src="bower_components/jquery/jquery.min.js"></script>
+	<script src="bower_components/handlebars/handlebars.min.js"></script>
+	<script src="bower_components/ember/ember.min.js"></script>
+	<!--<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>-->
+	<script src="bower_components/ember-data/ember-data.min.js"></script>
+
+	<script src="js/application.js"></script>
+	<script src="js/router.js"></script>
+	<script src="js/models/candidatos.js"></script>
+	<script src="js/views/helpers.js"></script>
+
+</body>
+</html>

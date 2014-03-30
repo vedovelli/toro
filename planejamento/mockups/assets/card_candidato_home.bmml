@@ -1,0 +1,50 @@
+<mockup version="1.0" skin="wireframe" fontFace="Balsamiq Sans" measuredW="539" measuredH="438" mockupW="200" mockupH="290">
+  <controls>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::Canvas" x="339" y="148" w="200" h="290" measuredW="100" measuredH="70" zOrder="0" locked="false" isInGroup="-1"/>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Webcam" x="350" y="159" w="177" h="146" measuredW="177" measuredH="146" zOrder="1" locked="false" isInGroup="-1"/>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Image" x="352" y="316" w="38" h="39" measuredW="77" measuredH="79" zOrder="2" locked="false" isInGroup="-1"/>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Label" x="396" y="336" w="-1" h="-1" measuredW="105" measuredH="21" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Partido%20Candidato</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::Link" x="352" y="370" w="-1" h="-1" measuredW="50" measuredH="19" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>votar%20up</text>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::Link" x="352" y="404" w="-1" h="-1" measuredW="54" measuredH="19" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>facebook</text>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Link" x="461" y="370" w="-1" h="-1" measuredW="66" measuredH="19" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>votar%20down</text>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Link" x="422" y="404" w="-1" h="-1" measuredW="40" measuredH="19" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>twitter</text>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::Link" x="478" y="404" w="-1" h="-1" measuredW="49" measuredH="19" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>google+</text>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::CheckBox" x="356" y="165" w="-1" h="-1" measuredW="16" measuredH="21" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <state>selected</state>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::Link" x="396" y="316" w="-1" h="-1" measuredW="126" measuredH="22" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <size>16</size>
+        <text>Nome%20Candidato</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

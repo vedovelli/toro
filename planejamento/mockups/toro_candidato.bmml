@@ -1,0 +1,228 @@
+<mockup version="1.0" skin="wireframe" fontFace="Balsamiq Sans" measuredW="1403" measuredH="967" mockupW="1375" mockupH="967">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::Component" x="231" y="0" w="1171" h="967" measuredW="1171" measuredH="967" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <override controlID="0" x="0" y="0" w="960" h="967"/>
+        <override controlID="1" x="15" y="15" w="-1" h="-1"/>
+        <override controlID="2" x="15" y="51" w="-1" h="-1"/>
+        <override controlID="3" x="199" y="40" w="-1" h="-1"/>
+        <override controlID="9" x="746" y="13" w="200" h="70"/>
+        <override controlID="10" x="0" y="91" w="960" h="-1"/>
+        <override controlID="11" x="0" y="899" w="960" h="-1"/>
+        <override controlID="12" x="461" y="931" w="-1" h="-1"/>
+        <override controlID="13" x="971" y="15" w="200" h="70"/>
+        <override controlID="14" x="460" y="49" w="-1" h="-1"/>
+        <override controlID="15" x="543" y="49" w="-1" h="-1"/>
+        <override controlID="16" x="610" y="49" w="-1" h="-1"/>
+        <override controlID="18" x="992" y="101" w="179" h="78"/>
+        <override controlID="19" x="459" y="29" w="-1" h="-1"/>
+        <override controlID="13:7" x="104" y="46" w="-1" h="-1"/>
+        <override controlID="9:3" x="69" y="33" w="-1" h="-1"/>
+        <override controlID="13:6" x="103" y="26" w="-1" h="-1"/>
+        <override controlID="9:0" x="0" y="0" w="200" h="70"/>
+        <override controlID="9:2" x="69" y="12" w="-1" h="-1"/>
+        <override controlID="13:4" x="8" y="7" w="-1" h="-1"/>
+        <override controlID="9:1" x="10" y="12" w="51" h="46"/>
+        <override controlID="-1"/>
+        <override controlID="13:5" x="104" y="6" w="-1" h="-1"/>
+        <override controlID="9:4" x="69" y="49" w="-1" h="-1"/>
+        <override controlID="13:0" x="0" y="0" w="200" h="70"/>
+        <src>./assets/main.bmml</src>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::Component" x="240" y="163" w="200" h="290" measuredW="200" measuredH="290" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <override controlID="10">
+          <state>up</state>
+        </override>
+        <override controlID="11">
+          <text>Nome%20Candidato</text>
+          <underline>false</underline>
+        </override>
+        <src>./assets/card_candidato_home.bmml</src>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Label" x="880" y="189" w="-1" h="-1" measuredW="221" measuredH="36" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>28</size>
+        <text>Pontos%20contr%E1rios</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Label" x="538" y="189" w="-1" h="-1" measuredW="183" measuredH="36" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>28</size>
+        <text>Pontos%20a%20favor</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::Label" x="871" y="332" w="-1" h="-1" measuredW="239" measuredH="36" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>28</size>
+        <text>Peso%20do%20Candidato</text>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::Label" x="524" y="332" w="-1" h="-1" measuredW="210" measuredH="36" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>28</size>
+        <text>M%E9dia%20de%20Pontos</text>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Label" x="576" y="239" w="-1" h="-1" measuredW="106" measuredH="48" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <size>40</size>
+        <text>5.987</text>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Label" x="923" y="239" w="-1" h="-1" measuredW="135" measuredH="48" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <size>40</size>
+        <text>25.232</text>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::Label" x="562" y="376" w="-1" h="-1" measuredW="135" measuredH="48" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <size>40</size>
+        <text>0.2372</text>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::Label" x="965" y="376" w="-1" h="-1" measuredW="50" measuredH="48" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <size>40</size>
+        <text>32</text>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::Canvas" x="455" y="163" w="352" h="139" measuredW="100" measuredH="70" zOrder="1" locked="false" isInGroup="-1"/>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::Canvas" x="455" y="314" w="352" h="139" measuredW="100" measuredH="70" zOrder="2" locked="false" isInGroup="-1"/>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::Canvas" x="814" y="163" w="352" h="139" measuredW="100" measuredH="70" zOrder="3" locked="false" isInGroup="-1"/>
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::Canvas" x="814" y="314" w="352" h="139" measuredW="100" measuredH="70" zOrder="4" locked="false" isInGroup="-1"/>
+    <control controlID="15" controlTypeID="com.balsamiq.mockups::Label" x="240" y="473" w="-1" h="-1" measuredW="129" measuredH="36" zOrder="14" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>28</size>
+        <text>Avalia%E7%F5es</text>
+      </controlProperties>
+    </control>
+    <control controlID="17" controlTypeID="com.balsamiq.mockups::Webcam" x="240" y="519" w="48" h="41" measuredW="177" measuredH="146" zOrder="15" locked="false" isInGroup="-1"/>
+    <control controlID="18" controlTypeID="com.balsamiq.mockups::Label" x="296" y="541" w="-1" h="-1" measuredW="114" measuredH="21" zOrder="16" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>votou%20A%20FAVOR%20em%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="19" controlTypeID="com.balsamiq.mockups::Paragraph" x="296" y="569" w="855" h="102" measuredW="200" measuredH="80" zOrder="17" locked="false" isInGroup="-1">
+      <controlProperties>
+        <italic>true</italic>
+        <text>Lorem%20ipsum%20dolor%20sit%20amet%2C%20consectetur%20adipiscing%20elit.%20Aliquam%20id%20bibendum%20enim%2C%20id%20rutrum%20turpis.%20Praesent%20tempor%20dolor%20eu%20libero%20dignissim%2C%20a%20facilisis%20augue%20dapibus.%20Aenean%20quam%20leo%2C%20ultrices%20ut%20interdum%20a%2C%20ornare%20nec%20risus.%20Cras%20sed%20mi%20eget%20sem%20tincidunt%20ornare%20ac%20vitae%20justo.%20Aliquam%20at%20leo%20auctor%2C%20vulputate%20metus%20eu%2C%20pretium%20nibh.%20Fusce%20in%20feugiat%20arcu.%20Ut%20ut%20augue%20aliquet%20nisi%20congue%20mattis.%20Maecenas%20urna%20nunc%2C%20dapibus%20ac%20semper%20scelerisque%2C%20dictum%20sit%20amet%20dolor.%20Integer%20viverra%2C%20massa%20tempor%20posuere%20sagittis%2C%20sem%20leo%20molestie%20risus%2C%20eget%20suscipit%20sapien%20purus%20vel%20nibh.%20Mauris%20sit%20amet%20sem%20nec%20nisl%20faucibus%20rhoncus.%20Curabitur%20vulputate%2C%20nibh%20vitae%20facilisis%20molestie%2C%20urna%20elit%20facilisis%20elit%2C%20eget%20rutrum%20risus%20urna%20ac%20turpis.%20Suspendisse%20a%20fermentum%20mauris%2C%20sed%20adipiscing%20lorem.</text>
+      </controlProperties>
+    </control>
+    <control controlID="21" controlTypeID="com.balsamiq.mockups::Link" x="410" y="544" w="-1" h="-1" measuredW="135" measuredH="19" zOrder="18" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>20%20de%20Janeiro%20de%202014</text>
+      </controlProperties>
+    </control>
+    <control controlID="22" controlTypeID="com.balsamiq.mockups::Link" x="463" y="671" w="-1" h="-1" measuredW="71" measuredH="19" zOrder="19" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Ver%20r%E9plicas</text>
+      </controlProperties>
+    </control>
+    <control controlID="25" controlTypeID="com.balsamiq.mockups::HRule" x="236" y="697" w="920" h="-1" measuredW="100" measuredH="10" zOrder="20" locked="false" isInGroup="-1"/>
+    <control controlID="26" controlTypeID="com.balsamiq.mockups::Webcam" x="240" y="719" w="48" h="41" measuredW="177" measuredH="146" zOrder="21" locked="false" isInGroup="-1"/>
+    <control controlID="27" controlTypeID="com.balsamiq.mockups::Label" x="296" y="741" w="-1" h="-1" measuredW="117" measuredH="21" zOrder="22" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>votou%20CONTRA%20em%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="28" controlTypeID="com.balsamiq.mockups::Paragraph" x="296" y="769" w="855" h="102" measuredW="200" measuredH="80" zOrder="23" locked="false" isInGroup="-1">
+      <controlProperties>
+        <italic>true</italic>
+        <text>Vestibulum%20sit%20amet%20odio%20eu%20metus%20convallis%20euismod%20at%20ac%20urna.%20Nunc%20at%20dui%20purus.%20Proin%20at%20risus%20convallis%2C%20sollicitudin%20nunc%20ut%2C%20ornare%20nibh.%20Vestibulum%20erat%20neque%2C%20luctus%20sit%20amet%20elementum%20a%2C%20elementum%20at%20massa.%20Suspendisse%20placerat%20turpis%20sed%20quam%20fringilla%20ornare.%20Mauris%20placerat%20interdum%20luctus.%20Maecenas%20feugiat%20dignissim%20dolor%20vitae%20ultricies.%20Etiam%20tempus%20dignissim%20nisi%20tristique%20molestie.%20Maecenas%20dapibus%20dui%20dolor%2C%20id%20scelerisque%20tellus%20mollis%20id.%20Morbi%20sodales%20mi%20quis%20tellus%20congue%20posuere.%20Sed%20nec%20urna%20convallis%2C%20iaculis%20magna%20vitae%2C%20congue%20elit.%20Suspendisse%20potenti.%20Phasellus%20a%20egestas%20nunc.%20Ut%20at%20mollis%20mauris.%20Vivamus%20et%20ipsum%20faucibus%2C%20tempor%20erat%20in%2C%20tincidunt%20nibh.%0A%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="30" controlTypeID="com.balsamiq.mockups::Link" x="414" y="744" w="-1" h="-1" measuredW="135" measuredH="19" zOrder="24" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>20%20de%20Janeiro%20de%202014</text>
+      </controlProperties>
+    </control>
+    <control controlID="31" controlTypeID="com.balsamiq.mockups::Link" x="463" y="871" w="-1" h="-1" measuredW="71" measuredH="19" zOrder="25" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Ver%20r%E9plicas</text>
+      </controlProperties>
+    </control>
+    <control controlID="32" controlTypeID="com.balsamiq.mockups::Link" x="296" y="869" w="-1" h="-1" measuredW="132" measuredH="19" zOrder="26" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Gostei%20desta%20avalia%E7%E3o</text>
+      </controlProperties>
+    </control>
+    <control controlID="35" controlTypeID="com.balsamiq.mockups::Label" x="556" y="541" w="-1" h="-1" measuredW="281" measuredH="21" zOrder="27" locked="false" isInGroup="-1">
+      <controlProperties>
+        <italic>true</italic>
+        <text>Esta%20r%E9plica%20possui%2030%20votos%20up%20e%205%20votos%20down</text>
+      </controlProperties>
+    </control>
+    <control controlID="36" controlTypeID="com.balsamiq.mockups::Label" x="562" y="741" w="-1" h="-1" measuredW="281" measuredH="21" zOrder="28" locked="false" isInGroup="-1">
+      <controlProperties>
+        <italic>true</italic>
+        <text>Esta%20r%E9plica%20possui%2030%20votos%20up%20e%205%20votos%20down</text>
+      </controlProperties>
+    </control>
+    <control controlID="37" controlTypeID="com.balsamiq.mockups::Link" x="296" y="671" w="-1" h="-1" measuredW="132" measuredH="19" zOrder="29" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Gostei%20desta%20avalia%E7%E3o</text>
+      </controlProperties>
+    </control>
+    <control controlID="38" controlTypeID="com.balsamiq.mockups::Link" x="986" y="871" w="-1" h="-1" measuredW="162" measuredH="19" zOrder="30" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Reportar%20como%20inadequada</text>
+      </controlProperties>
+    </control>
+    <control controlID="39" controlTypeID="com.balsamiq.mockups::Link" x="986" y="671" w="-1" h="-1" measuredW="162" measuredH="19" zOrder="31" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Reportar%20como%20inadequada</text>
+      </controlProperties>
+    </control>
+    <control controlID="40" controlTypeID="com.balsamiq.mockups::Link" x="296" y="519" w="-1" h="-1" measuredW="113" measuredH="22" zOrder="32" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <size>16</size>
+        <text>F%E1bio%20Vedovelli</text>
+      </controlProperties>
+    </control>
+    <control controlID="41" controlTypeID="com.balsamiq.mockups::Link" x="296" y="719" w="-1" h="-1" measuredW="113" measuredH="22" zOrder="33" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <size>16</size>
+        <text>Raquel%20Beolchi</text>
+      </controlProperties>
+    </control>
+    <control controlID="43" controlTypeID="com.balsamiq.mockups::ComboBox" x="1004" y="118" w="-1" h="-1" measuredW="160" measuredH="24" zOrder="34" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Ver%20outros%20candidatos</text>
+      </controlProperties>
+    </control>
+    <control controlID="44" controlTypeID="com.balsamiq.mockups::StickyNote" x="35" y="189" w="181" h="143" measuredW="109" measuredH="123" zOrder="35" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Caso%20o%20usu%E1rio%20que%20esteja%20visualizando%20a%20p%E1gina%20j%E1%20tenha%20votado%2C%20os%20links%20para%20votos%20n%E3o%20ser%E3o%20mostrados.%20No%20seu%20lugar%2C%20mostrar%20um%20link-pergunta%20DESEJAR%20MODIFICAR%20SEU%20VOTO%3F</text>
+      </controlProperties>
+    </control>
+    <control controlID="45" controlTypeID="com.balsamiq.mockups::StickyNote" x="1222" y="209" w="181" h="67" measuredW="109" measuredH="123" zOrder="36" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Os%20pontos%20ser%E3o%20atualizados%20em%20tempo%20real.</text>
+      </controlProperties>
+    </control>
+    <control controlID="46" controlTypeID="com.balsamiq.mockups::Link" x="28" y="20" w="-1" h="-1" measuredW="34" measuredH="19" zOrder="37" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>toro_home%26bm%3Btoro_home.bmml%26bm%3Btoro_home.bmml%26bm%3Btoro_home.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%220%2C20%2C34%2C39%22%20href%3D%22toro_home.bmml%22%20alt%3D%22toro_home%22%20id%3D%2246%22/%3E</map>
+        <text>Home</text>
+      </controlProperties>
+    </control>
+    <control controlID="47" controlTypeID="com.balsamiq.mockups::Link" x="28" y="48" w="-1" h="-1" measuredW="49" measuredH="19" zOrder="38" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>toro_ranking%26bm%3Btoro_ranking.bmml%26bm%3Btoro_ranking.bmml%26bm%3Btoro_ranking.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%220%2C48%2C49%2C67%22%20href%3D%22toro_ranking.bmml%22%20alt%3D%22toro_ranking%22%20id%3D%2247%22/%3E</map>
+        <text>Ranking</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
