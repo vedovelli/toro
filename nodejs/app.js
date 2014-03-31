@@ -19,7 +19,11 @@ db.once('open', function callback () {
 	var candidatoSchema = mongoose.Schema({
 	    nome: String,
 	    sobrenome: String,
-	    slug: String
+	    slug: String,
+	    votos: {
+			favor: Number,
+			contra:  Number
+		}
 	});
 
 	Candidato = mongoose.model('Candidato', candidatoSchema);
@@ -30,10 +34,14 @@ db.once('open', function callback () {
 
 app.get('/ved', function(req, res){
 
-	Candidato.remove({ _id: '53399c47475f7dccc5a095f6' }, function(err, candidato){
-		var data = candidato[0];
-		res.json(data);
-	});
+	// Candidato.find(function(err, candidatos){
+	// 	for(var i = 0; i< candidatos.length; i++){
+	// 		var c = candidatos[i];
+	// 		c.votos.favor = 0;
+	// 		c.votos.contra = 0;
+	// 		console.log(c.save());
+	// 	}
+	// });
 
 
 });
@@ -56,7 +64,9 @@ app.get('/candidatos', function(req, res){
 });
 
 
-app.get('/candidato/:id', function(req, res){
-	res.setHeader("Access-Control-Allow-Origin", "*");
-	res.json({id: 1,nome: 'Dilma', sobrenome: 'Roussef'});
+app.get('/candidato/:slug', function(req, res){
+	Candidato.find({slug: req.params.slug}, function(err, candidato){
+		res.setHeader("Access-Control-Allow-Origin", "*");
+		res.json(candidato[0]);
+	});
 });
