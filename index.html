@@ -1,18 +1,17 @@
 <!doctype html>
 <html lang="en">
+
+
+
 <head>
 	<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Toro</title>
 
-	<style>
-		.active{font-weight: bold;}
-		.right{width: 500px;top:10px; right:10px;position: absolute;}
-	</style>
-
-	<!--<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">-->
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="css/main.css">
 
 	<!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -26,12 +25,42 @@
 
 	<!--MAIN-->
 	<script type="text/x-handlebars">
-		<h1>Toro</h1>
-		<ul>
-			<li>{{#link-to "index"}}Home{{/link-to}}</li>
-			<li>{{#link-to "ranking"}}Ranking{{/link-to}}</li>
-			<li>{{#link-to "sobre"}}Sobre{{/link-to}}</li>
-		</ul>
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">Futuro Político</a>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="active">{{#link-to 'index'}}Home{{/link-to}}</li>
+						<li>{{#link-to 'ranking'}}Ranking de Candidatos{{/link-to}}</li>
+						<li>{{#link-to 'sobre'}}Sobre o Site{{/link-to}}</li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Login with <b class="caret"></b></a>
+							<ul class="dropdown-menu toro-login">
+								<li role="presentation" class="dropdown-header">Login with:</li>
+								<li><a href="#">Facebook</a></li>
+								<li class="disabled"><a href="#"> Twitter</a></li>
+								<li class="disabled"><a href="#"> Google</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</div><!-- /.container-fluid -->
+		</nav>
+		<h2>
+			Futuro Político<br>
+			<small>Os candidatos à Presidência do Brasil em 2014</small>
+		</h2>
+
 		{{outlet}}
 	</script>
 
@@ -76,7 +105,7 @@
 	<script src="bower_components/handlebars/handlebars.min.js"></script>
 	<script src="bower_components/modernizr/modernizr.js"></script>
 	<script src="bower_components/ember/ember.min.js"></script>
-	<!--<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>-->
+	<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 
 	<script src="js/application.js"></script>
 	<script src="js/router.js"></script>

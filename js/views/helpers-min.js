@@ -1,0 +1,1 @@
+Handlebars.registerHelper("debug",function(o){console.log("Current Context"),console.log("===================="),console.log(this),o&&(console.log("Value"),console.log("===================="),console.log(o))});

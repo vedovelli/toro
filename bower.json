@@ -19,5 +19,8 @@
   "dependencies": {
     "ember-data": "~0.0.14",
     "ember": "~1.4.0"
+  },
+  "resolutions": {
+    "ember": "~1.4.0"
   }
 }

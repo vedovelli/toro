@@ -17,14 +17,14 @@ if (window.location.hash && window.location.hash === "#_=_") {
     window.history.pushState("", document.title, window.location.pathname);
   } else {
     // Prevent scrolling by storing the page's current scroll offset
-    var scroll = {
+    var _scroll = {
       top: document.body.scrollTop,
       left: document.body.scrollLeft
     };
     window.location.hash = "";
     // Restore the scroll offset, should be flicker free
-    document.body.scrollTop = scroll.top;
-    document.body.scrollLeft = scroll.left;
+    document.body.scrollTop = _scroll.top;
+    document.body.scrollLeft = _scroll.left;
   }
 }
 
