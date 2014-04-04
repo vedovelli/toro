@@ -47,7 +47,7 @@
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Login with <b class="caret"></b></a>
 							<ul class="dropdown-menu toro-login">
 								<li role="presentation" class="dropdown-header">Login with:</li>
-								<li><a href="#">Facebook</a></li>
+								<li><a href="http://toro.ved:4730/auth/facebook">Facebook</a></li>
 								<li class="disabled"><a href="#"> Twitter</a></li>
 								<li class="disabled"><a href="#"> Google</a></li>
 							</ul>
@@ -90,8 +90,11 @@
 			<p>{{id}}</p>
 			<p>{{nome}} {{sobrenome}}</p>
 			<p>Votos: {{votos.favor}} são a favor, {{votos.contra}} são contra o candidato.</p>
+			<p>
+				<button {{action 'voto_favor' _id slug}}>votar a favor</button>
+				<button {{action 'voto_contra' _id slug}}>votar contra</button>
+			</p>
 		</script>
-
 
 
 
@@ -108,6 +111,7 @@
 	<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 
 	<script src="js/application.js"></script>
+	<script src="js/controllers/candidato.js"></script>
 	<script src="js/router.js"></script>
 	<script src="js/views/helpers.js"></script>
 

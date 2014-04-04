@@ -143,6 +143,40 @@ app.get('/', function(req, res) {
 
 
 /*Other routes*/
+
+app.get('/voto/:candidato/:voto', function(req, res){
+
+	/*TODO
+		- implementar verificação de usuário já ter votado
+		- implementar a validação para aumentar a segurança
+		- retornar mensagem de erro
+	*/
+
+	var response_obj;
+	res.setHeader("Access-Control-Allow-Origin", "*");
+
+	Candidato.find({_id: req.params.candidato}, function(err, candidato){
+		if(candidato){
+			if(req.params.voto === 'favor'){
+				candidato[0].votos.favor++;
+			} else if(req.params.voto === 'contra'){
+				candidato[0].votos.contra++;
+			}
+			candidato[0].save();
+			response_obj = {
+				response: true,
+				message: 'voto salvo com sucesso.'
+			};
+		} else {
+			response_obj = {
+				response: false,
+				message: 'candidato não localizado.'
+			}
+		}
+		res.json(response_obj);
+	});
+});
+
 app.get('/candidatos', function(req, res){
 	var candidatos = Candidato.find(function(err, candidatos){
 		res.setHeader("Access-Control-Allow-Origin", "*");
