@@ -1,0 +1,1 @@
+Toro.VotacaoView=Ember.View.create({templateName:"votacao",click:function(e){var t=Ember.$(e.target),a=Ember.$(e.currentTarget.children);t.is("button")&&(a.removeClass("votar-button-disabled"),a.removeAttr("disabled"),t.addClass("votar-button-disabled"),t.attr("disabled","disabled"))}});

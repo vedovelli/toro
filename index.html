@@ -90,10 +90,10 @@
 			<p>{{id}}</p>
 			<p>{{nome}} {{sobrenome}}</p>
 			<p>Votos: {{votos.favor}} são a favor, {{votos.contra}} são contra o candidato.</p>
-			<p>
-				<button {{action 'voto_favor' _id slug}}>votar a favor</button>
-				<button {{action 'voto_contra' _id slug}}>votar contra</button>
-			</p>
+			{{#view 'votacao'}}
+				<button {{action 'voto_favor' _id slug}}>voto positivo</button>
+				<button {{action 'voto_contra' _id slug}}>voto negativo</button>
+			{{/view}}
 		</script>
 
 
@@ -111,9 +111,11 @@
 	<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 
 	<script src="js/application.js"></script>
+	<script src="js/controllers/application.js"></script>
 	<script src="js/controllers/candidato.js"></script>
 	<script src="js/router.js"></script>
 	<script src="js/views/helpers.js"></script>
+	<script src="js/views/buttons/votar.js"></script>
 
 </body>
 </html>

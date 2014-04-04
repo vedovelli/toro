@@ -15,7 +15,7 @@ Toro.VotoRoute = Ember.Route.extend({
 
 	model: function(params){
 		this.slug = params.slug;
-		return Ember.$.getJSON(Toro.configs.webservice_uri + '/voto/' + params.id +'1/'+ params.voto);
+		return Ember.$.getJSON(Toro.configs.webservice_uri + '/voto/' + params.id +'/'+ params.voto);
 	},
 
 	afterModel: function(model) {
