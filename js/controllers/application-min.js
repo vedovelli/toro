@@ -1,1 +1,1 @@
-Toro.ApplicationController=Ember.ObjectController.extend({});
+Toro.ApplicationController=Ember.ObjectController.extend({someVar:!0,anotherVar:"vedovelli"});

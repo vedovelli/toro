@@ -81,7 +81,7 @@
 		{{#each}}
 		<p>{{#link-to 'candidato' this}}{{nome}} {{sobrenome}}{{/link-to}}</p>
 		{{/each}}
-		<div class="right">{{outlet}}</div>
+		<div>{{outlet}}</div>
 	</script>
 
 		<!--CANDIDATO: child of RANKING-->
@@ -94,8 +94,28 @@
 				<button {{action 'voto_favor' _id slug}}>voto positivo</button>
 				<button {{action 'voto_contra' _id slug}}>voto negativo</button>
 			{{/view}}
+			<hr/>
+			<form method="post" action="#" id="form-comentario">
+				<label for="comentario">Deixe sua justificativa</label><br>
+				<textarea id="comentario" name="comentario"></textarea><br>
+				<input type="submit" value="Enviar">
+			</form>
+			<hr/>
+			{{#if isShowingMessages}}
+				<a href="#" {{action 'mostrar_mensagens'}}>fechar justificativas</a>
+			{{else}}
+				<a href="#" {{action 'mostrar_mensagens'}}>ver justificativas</a>
+			{{/if}}
+			{{outlet}}
 		</script>
 
+			<!--MENSAGENS: child of CANDIDATO-->
+			<script type="text/x-handlebars" data-template-name="mensagem">
+				<h3>Mensagens para {{controllers.candidato.nome}} {{controllers.candidato.sobrenome}}</h3>
+				{{#each}}
+					<p>{{mensagem}}</p>
+				{{/each}}
+			</script>
 
 
 	<!--SOBRE-->
@@ -113,6 +133,8 @@
 	<script src="js/application.js"></script>
 	<script src="js/controllers/application.js"></script>
 	<script src="js/controllers/candidato.js"></script>
+	<script src="js/controllers/voto.js"></script>
+	<script src="js/controllers/mensagem.js"></script>
 	<script src="js/router.js"></script>
 	<script src="js/views/helpers.js"></script>
 	<script src="js/views/buttons/votar.js"></script>
