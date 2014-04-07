@@ -7,9 +7,9 @@ Toro.Router.map(function() {
 		});
 	});
 
-	this.resource('voto', {path: '/voto/:id/:slug/:voto'});
-
 	this.resource('sobre');
+
+	this.resource('voto', {path: '/voto/:id/:slug/:voto'});
 
 });
 
@@ -55,6 +55,10 @@ Toro.RankingRoute = Ember.Route.extend({
 });
 
 Toro.CandidatoRoute = Ember.Route.extend({
+
+	beforeModel: function(){
+		this.controllerFor('application').set('isShowingMessages', false);
+	},
 
 	model: function(params){
 		return Ember.$.getJSON(Toro.configs.webservice_uri + '/candidato/' + params.slug);

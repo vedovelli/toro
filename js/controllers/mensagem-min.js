@@ -1,1 +1,1 @@
-Toro.MensagemController=Ember.ArrayController.extend({needs:"candidato"});
+Toro.MensagemController=Ember.ArrayController.extend({needs:["candidato"],actions:{comentario:function(o){Ember.$.post(Toro.configs.webservice_uri+"/comentario",{comentario:o}).then(function(o){window.console.log(moment(o.response).fromNow())})}}});

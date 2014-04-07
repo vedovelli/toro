@@ -1,17 +1,19 @@
 
 Toro.CandidatoController = Ember.ObjectController.extend({
 
-	isShowingMessages: false,
+	needs: 'application',
 
 	actions: {
 
 		mostrar_mensagens: function(){
-			if(this.isShowingMessages){
-				this.set('isShowingMessages', false);
+			var application = this.get('controllers.application');
+
+			if(application.isShowingMessages){
+				application.set('isShowingMessages', false);
 				this.transitionToRoute('candidato');
 			} else {
+				application.set('isShowingMessages', !this.isShowingMessages);
 				this.transitionToRoute('mensagem');
-				this.set('isShowingMessages', !this.isShowingMessages);
 			}
 		},
 

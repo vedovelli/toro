@@ -79,7 +79,7 @@
 	<script type="text/x-handlebars" data-template-name="ranking">
 		<h2>Ranking</h2>
 		{{#each}}
-		<p>{{#link-to 'candidato' this}}{{nome}} {{sobrenome}}{{/link-to}}</p>
+		<p>{{#link-to 'candidato' this.slug}}{{nome}} {{sobrenome}}{{/link-to}}</p>
 		{{/each}}
 		<div>{{outlet}}</div>
 	</script>
@@ -94,14 +94,7 @@
 				<button {{action 'voto_favor' _id slug}}>voto positivo</button>
 				<button {{action 'voto_contra' _id slug}}>voto negativo</button>
 			{{/view}}
-			<hr/>
-			<form method="post" action="#" id="form-comentario">
-				<label for="comentario">Deixe sua justificativa</label><br>
-				<textarea id="comentario" name="comentario"></textarea><br>
-				<input type="submit" value="Enviar">
-			</form>
-			<hr/>
-			{{#if isShowingMessages}}
+			{{#if controllers.application.isShowingMessages}}
 				<a href="#" {{action 'mostrar_mensagens'}}>fechar justificativas</a>
 			{{else}}
 				<a href="#" {{action 'mostrar_mensagens'}}>ver justificativas</a>
@@ -111,6 +104,13 @@
 
 			<!--MENSAGENS: child of CANDIDATO-->
 			<script type="text/x-handlebars" data-template-name="mensagem">
+				<hr/>
+				<form method="post" action="#" id="form-comentario">
+					<label for="comentario">Deixe sua justificativa</label><br>
+					{{textarea id="comentario" name="comentario" value=comentario}}<br>
+					<input type="submit" value="Enviar" {{action 'comentario' comentario}}>
+				</form>
+				<hr/>
 				<h3>Mensagens para {{controllers.candidato.nome}} {{controllers.candidato.sobrenome}}</h3>
 				{{#each}}
 					<p>{{mensagem}}</p>
@@ -129,6 +129,7 @@
 	<script src="bower_components/modernizr/modernizr.js"></script>
 	<script src="bower_components/ember/ember.min.js"></script>
 	<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="bower_components/momentjs/min/moment-with-langs.js"></script>
 
 	<script src="js/application.js"></script>
 	<script src="js/controllers/application.js"></script>

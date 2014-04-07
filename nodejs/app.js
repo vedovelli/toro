@@ -4,6 +4,8 @@ var Candidato;
 var Usuario;
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://127.0.0.1/toro');
+var moment = require('moment');
+moment.lang('pt_BR');
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function callback () {
@@ -143,6 +145,11 @@ app.get('/', function(req, res) {
 
 
 /*Other routes*/
+
+app.post('/comentario', function(req, res){
+	res.setHeader("Access-Control-Allow-Origin", "*");
+	res.json({response: moment().format()});
+});
 
 app.get('/voto/:candidato/:voto', function(req, res){
 

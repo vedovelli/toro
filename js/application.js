@@ -1,4 +1,7 @@
-window.Toro = Ember.Application.create();
+window.Toro = Ember.Application.create({
+  LOG_TRANSITIONS: true,
+  LOG_TRANSITIONS_INTERNAL: true
+});
 
 // Toro.Store = DS.Store.extend();
 
@@ -16,7 +19,7 @@ if (window.location.hash && window.location.hash === "#_=_") {
   if (Modernizr.history) {
     window.history.pushState("", document.title, window.location.pathname);
   } else {
-    // Prevent scrolling by storing the page's current scroll offset
+  // Prevent scrolling by storing the page's current scroll offset
     var _scroll = {
       top: document.body.scrollTop,
       left: document.body.scrollLeft
@@ -27,4 +30,3 @@ if (window.location.hash && window.location.hash === "#_=_") {
     document.body.scrollLeft = _scroll.left;
   }
 }
-
