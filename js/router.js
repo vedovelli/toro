@@ -16,7 +16,12 @@ Toro.Router.map(function() {
 Toro.MensagemRoute = Ember.Route.extend({
 
 	model: function(params){
-		return Ember.$.getJSON(Toro.configs.webservice_uri + '/comentarios/'+ params.id);
+		return Ember.$.getJSON(Toro.configs.webservice_uri + '/comentarios/'+ params.id).then(function(data){
+			Ember.$(data).each(function(index, item){
+				item.fromNow = moment(item.data).fromNow();
+			});
+			return data;
+		});
 	}
 
 });
