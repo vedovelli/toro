@@ -2,6 +2,7 @@
 /*Database setup, init & models*/
 var Candidato;
 var Usuario;
+var Mensagem;
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://127.0.0.1/toro');
 var moment = require('moment');
@@ -30,8 +31,16 @@ db.once('open', function callback () {
 		location: String
 	});
 
+	var comentarioSchema = mongoose.Schema({
+		usuario: Number,
+		candidato: String,
+		comentario: String,
+		data: Date
+	});
+
 	Candidato = mongoose.model('Candidato', candidatoSchema);
 	Usuario = mongoose.model('Usuario', usuarioSchema);
+	Comentario = mongoose.model('Comentario', comentarioSchema);
 
 });
 
@@ -145,10 +154,29 @@ app.get('/', function(req, res) {
 
 
 /*Other routes*/
+app.get('/comentarios/:candidato', function(req, res){
+	console.log(req.params.candidato);
+	Comentario.find({candidato: req.params.candidato}, function(err, comentarios){
+		console.log(comentarios);
+		res.setHeader("Access-Control-Allow-Origin", "*");
+		res.json(comentarios);
+	});
+});
 
 app.post('/comentario', function(req, res){
+
+	var comentario = new Comentario({
+		usuario: req.body.usuario,
+		candidato: req.body.candidato,
+		comentario: req.body.comentario,
+		data: new Date
+	});
+
+	comentario.save();
+
 	res.setHeader("Access-Control-Allow-Origin", "*");
-	res.json({response: moment().format()});
+	res.json(comentario);
+
 });
 
 app.get('/voto/:candidato/:voto', function(req, res){

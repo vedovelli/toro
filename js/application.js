@@ -10,6 +10,8 @@ Toro.configs ={};
 Toro.configs.webservice_uri = 'http://toro.ved:4730';
 Toro.configs.root_uri = 'http://toro.ved/';
 
+moment.lang('pt_BR');
+
 // From https://github.com/jaredhanson/passport-facebook/issues/12#issuecomment-5913711
 // Remove the ugly Facebook appended hash
 // <https://github.com/jaredhanson/passport-facebook/issues/12>

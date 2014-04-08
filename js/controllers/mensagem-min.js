@@ -1,1 +1,1 @@
-Toro.MensagemController=Ember.ArrayController.extend({needs:["candidato"],actions:{comentario:function(o){Ember.$.post(Toro.configs.webservice_uri+"/comentario",{comentario:o}).then(function(o){window.console.log(moment(o.response).fromNow())})}}});
+Toro.MensagemController=Ember.ArrayController.extend({needs:["candidato"],actions:{comentario:function(o,e){var t=this.get("model");Ember.$.post(Toro.configs.webservice_uri+"/comentario",{usuario:1,candidato:e._id,comentario:o}).then(function(o){t.pushObject(o)}),this.set("comentario","")}}});

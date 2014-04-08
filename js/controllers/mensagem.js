@@ -4,11 +4,12 @@ Toro.MensagemController = Ember.ArrayController.extend({
 	needs: ['candidato'],
 
 	actions: {
-		comentario: function(comentario){
-			Ember.$.post(Toro.configs.webservice_uri + '/comentario', {comentario: comentario}).then(function(data){
-				moment.lang('pt_BR');
-				window.console.log(moment(data.response).fromNow());
+		comentario: function(comentario, candidato){
+			var model = this.get('model');
+			Ember.$.post(Toro.configs.webservice_uri + '/comentario', {usuario: 1, candidato: candidato._id, comentario: comentario}).then(function(data){
+				model.pushObject(data); // adiciona o objeto retornado ao model
 			});
+			this.set('comentario', '');
 		}
 	}
 

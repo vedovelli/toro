@@ -97,7 +97,7 @@
 			{{#if controllers.application.isShowingMessages}}
 				<a href="#" {{action 'mostrar_mensagens'}}>fechar justificativas</a>
 			{{else}}
-				<a href="#" {{action 'mostrar_mensagens'}}>ver justificativas</a>
+				{{#link-to 'mensagem' _id}}ver justificativas{{/link-to}}
 			{{/if}}
 			{{outlet}}
 		</script>
@@ -108,12 +108,12 @@
 				<form method="post" action="#" id="form-comentario">
 					<label for="comentario">Deixe sua justificativa</label><br>
 					{{textarea id="comentario" name="comentario" value=comentario}}<br>
-					<input type="submit" value="Enviar" {{action 'comentario' comentario}}>
+					<input type="submit" value="Enviar" {{action 'comentario' comentario controllers.candidato}}>
 				</form>
 				<hr/>
 				<h3>Mensagens para {{controllers.candidato.nome}} {{controllers.candidato.sobrenome}}</h3>
 				{{#each}}
-					<p>{{mensagem}}</p>
+					<p>{{comentario}}</p>
 				{{/each}}
 			</script>
 
