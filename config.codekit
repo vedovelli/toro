@@ -5120,6 +5120,28 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/js\/components\/docCookies-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/components\/docCookies-min.js",
+		"outputAbbreviatedPath": "\/js\/components\/docCookies-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/js\/components\/docCookies.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/components\/docCookies.js",
+		"outputAbbreviatedPath": "\/js\/components\/docCookies-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/js\/controllers\/application-min.js": {
 		"fileType": 64,
 		"ignore": 1,
@@ -5159,6 +5181,28 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/controllers\/candidato.js",
 		"outputAbbreviatedPath": "\/js\/controllers\/candidato-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/js\/controllers\/index-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/controllers\/index-min.js",
+		"outputAbbreviatedPath": "\/js\/controllers\/index-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/js\/controllers\/index.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/controllers\/index.js",
+		"outputAbbreviatedPath": "\/js\/controllers\/index-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -13345,7 +13389,7 @@
 	"javascriptOutputStyle": 1,
 	"javascriptOutputSuffix": "-min",
 	"javascriptSyntaxCheckerStyle": 1,
-	"jsCheckerReservedNamesString": "Ember, Toro, Modernizr, Handlebars, moment",
+	"jsCheckerReservedNamesString": "Ember, Toro, Modernizr, Handlebars, moment, docCookies",
 	"jsHintFlags2": {
 		"asi": {
 			"active": 0,

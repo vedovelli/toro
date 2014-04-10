@@ -1,1 +1,1 @@
-Handlebars.registerHelper("debug",function(o){console.log("Current Context"),console.log("===================="),console.log(this),o&&(console.log("Value"),console.log("===================="),console.log(o))});
+Ember.Handlebars.helper("data-publicacao",function(){var a="";return a+=" <small>",a+=moment(this.data).calendar(),a+="</small>",new Handlebars.SafeString(a)});

@@ -1,12 +1,13 @@
 
+var client_url = 'http://toro.ved';
+
+
 /*Database setup, init & models*/
 var Candidato;
 var Usuario;
 var Mensagem;
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://127.0.0.1/toro');
-var moment = require('moment');
-moment.lang('pt_BR');
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function callback () {
@@ -121,8 +122,9 @@ app.get('/auth/facebook', passport.authenticate('facebook'));
 // access was granted, the user will be logged in.  Otherwise,
 // authentication has failed.
 app.get('/auth/facebook/callback', passport.authenticate('facebook', { successRedirect: '/auth/facebook/ok', failureRedirect: '/login' }));
+
 app.get('/auth/facebook/ok', function(req, res){
-	res.redirect('http://toro.ved/');
+	res.redirect(client_url);
 });
 
 app.get('/login', function(req, res){
@@ -155,9 +157,7 @@ app.get('/', function(req, res) {
 
 /*Other routes*/
 app.get('/comentarios/:candidato', function(req, res){
-	console.log(req.params.candidato);
-	Comentario.find({candidato: req.params.candidato}, function(err, comentarios){
-		console.log(comentarios);
+	Comentario.find({candidato: req.params.candidato}).sort('-data').exec(function(err, comentarios){
 		res.setHeader("Access-Control-Allow-Origin", "*");
 		res.json(comentarios);
 	});

@@ -1,1 +1,1 @@
-Toro.ApplicationController=Ember.ObjectController.extend({isShowingMessages:!1});
+Toro.ApplicationController=Ember.ObjectController.extend({isShowingMessages:!1,actions:{facebook:function(){docCookies.setItem("return_path",window.location),window.location=Toro.configs.webservice_uri+"/auth/facebook"}}});
