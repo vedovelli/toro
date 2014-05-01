@@ -1,6 +1,8 @@
 
 var client_url = 'http://ved.local:5757';
 
+/**/
+
 
 /*Database setup, init & models*/
 var Candidato;
@@ -29,7 +31,8 @@ db.once('open', function callback(){
 		gender: String,
 		provider: String,
 		hometown: String,
-		location: String
+		location: String,
+		avatar: String
 	});
 
 	var comentarioSchema = mongoose.Schema({
@@ -66,7 +69,8 @@ passport.use(new FacebookStrategy({
 					gender: profile.gender,
 					provider: profile.provider,
 					hometown: profile._json.hometown.name,
-					location: profile._json.location.name
+					location: profile._json.location.name,
+					avatar: 'https://graph.facebook.com/'+profile.username+'/picture'
 				});
 			} else {
 				usuario = usuarios[0];
@@ -76,10 +80,12 @@ passport.use(new FacebookStrategy({
 				usuario.gender = profile.gender,
 				usuario.provider = profile.provider,
 				usuario.hometown = profile._json.hometown.name,
-				usuario.location = profile._json.location.name
-				console.log(usuario);
+				usuario.location = profile._json.location.name,
+				usuario.avatar = 'https://graph.facebook.com/'+profile.username+'/picture'
 			}
+
 			usuario.save();
+
 			passport.serializeUser(function(usuario, done) {
 			  done(null, usuario.id);
 			});
