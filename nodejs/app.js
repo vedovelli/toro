@@ -1,5 +1,5 @@
 
-var client_url = 'http://toro.ved';
+var client_url = 'http://ved.local:5757';
 
 
 /*Database setup, init & models*/
@@ -10,7 +10,7 @@ var mongoose = require('mongoose');
 mongoose.connect('mongodb://127.0.0.1/toro');
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function callback () {
+db.once('open', function callback(){
 
 	/*Models*/
 	var candidatoSchema = mongoose.Schema({
@@ -50,7 +50,6 @@ db.once('open', function callback () {
 var passport = require('passport');
 var FacebookStrategy = require('passport-facebook').Strategy;
 
-
 passport.use(new FacebookStrategy({
 		clientID: '1433705530208473',
 		clientSecret: '77dbcee96747a99e24a78806dcebca2b',
@@ -66,17 +65,19 @@ passport.use(new FacebookStrategy({
 					displayName: profile.displayName,
 					gender: profile.gender,
 					provider: profile.provider,
-					hometown: profile._json.hometown,
-					location: profile._json.location
+					hometown: profile._json.hometown.name,
+					location: profile._json.location.name
 				});
 			} else {
 				usuario = usuarios[0];
+				console.log(usuario);
 				usuario.id = profile.id,
 				usuario.displayName = profile.displayName,
 				usuario.gender = profile.gender,
 				usuario.provider = profile.provider,
-				usuario.hometown = profile._json.hometown,
-				usuario.location = profile._json.location
+				usuario.hometown = profile._json.hometown.name,
+				usuario.location = profile._json.location.name
+				console.log(usuario);
 			}
 			usuario.save();
 			passport.serializeUser(function(usuario, done) {

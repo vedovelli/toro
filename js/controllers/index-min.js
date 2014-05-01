@@ -1,1 +1,1 @@
-Toro.ApplicationController=Ember.ObjectController.extend({actions:{facebook:function(){alert("facebook nessa porra!!!")}}});
+Toro.ApplicationController=Ember.ObjectController.extend({});
