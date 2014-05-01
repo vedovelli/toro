@@ -1,15 +1,14 @@
 
-var client_url = 'http://ved.local:5757';
-
-/**/
+var client_url = 'http://toro.ved';
+var db_url = 'mongodb://127.0.0.1/toro';
 
 
 /*Database setup, init & models*/
 var Candidato;
-var Usuario;
-var Mensagem;
-var mongoose = require('mongoose');
-mongoose.connect('mongodb://127.0.0.1/toro');
+var Usuario; // model
+var usuario; // usuario logado
+var Comentario;
+var mongoose = require('mongoose').connect(db_url);
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function callback(){
@@ -59,11 +58,18 @@ passport.use(new FacebookStrategy({
 		callbackURL: "http://toro.ved:4730/auth/facebook/callback"
 	},
 	function(accessToken, refreshToken, profile, done) {
-		var usuario;
-		Usuario.find({id: profile.id}, function(err, usuarios) {
+		Usuario.findOne({id: profile.id}, function(err, user) {
 			if (err) { return done(err); }
-			if (usuarios.length === 0) {
-				usuario = new Usuario({
+			if (user) {
+				user.id = profile.id,
+				user.displayName = profile.displayName,
+				user.gender = profile.gender,
+				user.provider = profile.provider,
+				user.hometown = profile._json.hometown.name,
+				user.location = profile._json.location.name,
+				user.avatar = 'https://graph.facebook.com/'+profile.username+'/picture'
+			} else {
+				user = new Usuario({
 					id: profile.id,
 					displayName: profile.displayName,
 					gender: profile.gender,
@@ -72,31 +78,21 @@ passport.use(new FacebookStrategy({
 					location: profile._json.location.name,
 					avatar: 'https://graph.facebook.com/'+profile.username+'/picture'
 				});
-			} else {
-				usuario = usuarios[0];
-				console.log(usuario);
-				usuario.id = profile.id,
-				usuario.displayName = profile.displayName,
-				usuario.gender = profile.gender,
-				usuario.provider = profile.provider,
-				usuario.hometown = profile._json.hometown.name,
-				usuario.location = profile._json.location.name,
-				usuario.avatar = 'https://graph.facebook.com/'+profile.username+'/picture'
 			}
 
-			usuario.save();
+			user.save();
 
-			passport.serializeUser(function(usuario, done) {
-			  done(null, usuario.id);
+			passport.serializeUser(function(user, done) {
+			  done(null, user.id);
 			});
 
 			passport.deserializeUser(function(id, done) {
-			  Usuario.find({id: id}, function(err, usuario) {
-			    done(err, usuario);
+			  Usuario.find({id: id}, function(err, user) {
+			    done(err, user);
 			  });
 			});
 
-			done(null, usuario);
+			return done(null, user);
 
 		});
 
@@ -107,12 +103,15 @@ passport.use(new FacebookStrategy({
 /*App setup & init*/
 var express = require('express');
 var app = express();
+var MongoStore = require('connect-mongo')(express);
+
 app.listen(4730);
 app.configure(function() {
   app.use(express.static('public'));
   app.use(express.cookieParser());
   app.use(express.bodyParser());
-  app.use(express.session({ secret: 'tororoto' }));
+  app.use(express.session({secret: 'tororoto'}));
+  // app.use(express.cookieSession({secret: 'tororoto'}));
   app.use(passport.initialize());
   app.use(passport.session());
   app.use(app.router);
@@ -131,6 +130,7 @@ app.get('/auth/facebook', passport.authenticate('facebook'));
 app.get('/auth/facebook/callback', passport.authenticate('facebook', { successRedirect: '/auth/facebook/ok', failureRedirect: '/login' }));
 
 app.get('/auth/facebook/ok', function(req, res){
+	usuario = req.user;
 	res.redirect(client_url);
 });
 
@@ -226,10 +226,14 @@ app.get('/candidatos', function(req, res){
 	});
 });
 
-
 app.get('/candidato/:slug', function(req, res){
 	Candidato.find({slug: req.params.slug}, function(err, candidato){
 		res.setHeader("Access-Control-Allow-Origin", "*");
 		res.json(candidato[0]);
 	});
+});
+
+app.get('/usuario', function(req, res){
+	res.setHeader("Access-Control-Allow-Origin", "*");
+	res.json(usuario);
 });
