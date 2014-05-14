@@ -2,6 +2,9 @@
 	opacity: 0.5;
 }
 
-.toro-login-box{
-	border: #000 1px solid;
+.toro-login-box {
+  width: 250px;
+  position: absolute;
+  top: 70px;
+  right: 10px;
 }
