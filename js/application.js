@@ -22,5 +22,4 @@ if(return_path !== null) {
 
 Toro.$.getJSON(Toro.configs.webservice_uri + '/usuario', function(data){
 	Toro.usuarioLogado = data;
-	console.log(Toro.usuarioLogdo);
 });
