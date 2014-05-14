@@ -8,7 +8,6 @@ Toro.configs ={};
 Toro.configs.webservice_uri = 'http://toro.ved:4730';
 Toro.configs.root_uri = 'http://toro.ved/';
 
-
 /*Configura a biblioteca Moment.js*/
 moment.lang('pt_BR');
 
@@ -19,7 +18,3 @@ if(return_path !== null) {
   docCookies.removeItem('return_path');
   window.location = return_path;
 }
-
-Toro.$.getJSON(Toro.configs.webservice_uri + '/usuario', function(data){
-	Toro.usuarioLogado = data;
-});

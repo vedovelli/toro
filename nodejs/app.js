@@ -139,6 +139,12 @@ app.get('/login', function(req, res){
 	res.send('login route');
 });
 
+app.get('/auth/logout', function(req, res){
+	req.logout();
+	usuario = undefined;
+	res.redirect(client_url);
+});
+
 app.get('/ved', function(req, res){
 
 	// Candidato.find(function(err, candidatos){

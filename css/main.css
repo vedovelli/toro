@@ -1,3 +1,7 @@
 .votar-button-disabled{
 	opacity: 0.5;
 }
+
+.toro-login-box{
+	border: #000 1px solid;
+}
