@@ -93,12 +93,14 @@
 			<!--MENSAGENS: child of CANDIDATO-->
 			<script type="text/x-handlebars" data-template-name="mensagem">
 				<hr/>
+				{{#if Toro.usuarioLogado}}
 				<form method="post" action="#" id="form-comentario">
 					<label for="comentario">Deixe sua justificativa</label><br>
 					{{textarea id="comentario" name="comentario" value=comentario}}<br>
 					<input type="submit" value="Enviar" {{action 'comentario' comentario controllers.candidato}}>
 				</form>
 				<hr/>
+				{{/if}}
 				<h3>Mensagens para {{controllers.candidato.nome}} {{controllers.candidato.sobrenome}}</h3>
 				{{#each}}
 					<h4>{{comentario}}</h4>
@@ -114,9 +116,9 @@
 
 	<!--COMPONENTS-->
 	<script type="text/x-handlebars" id="components/toro-login">
-		{{#if usuarioLogado}}
-			<img {{bind-attr src=usuarioLogado.avatar}} width="45" height="45" />
-			{{usuarioLogado.displayName}}
+		{{#if Toro.usuarioLogado}}
+			<img {{bind-attr src=Toro.usuarioLogado.avatar}} width="45" height="45" />
+			{{Toro.usuarioLogado.displayName}}
 			[<a href="#" {{action 'facebookLogout'}}>sair</a>]
 		{{else}}
 			<ul class="nav">

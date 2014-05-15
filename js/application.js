@@ -8,6 +8,9 @@ Toro.configs ={};
 Toro.configs.webservice_uri = 'http://toro.ved:4730';
 Toro.configs.root_uri = 'http://toro.ved/';
 
+/*Propriedade que guarda o usuário logado*/
+Toro.usuarioLogado = undefined;
+
 /*Configura a biblioteca Moment.js*/
 moment.lang('pt_BR');
 
